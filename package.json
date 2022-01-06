@@ -14,6 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/jprestor/backend-project-lvl2.git"
   },
+  "type": "module",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jprestor/backend-project-lvl2/issues"
