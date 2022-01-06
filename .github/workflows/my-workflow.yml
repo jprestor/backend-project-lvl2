@@ -1,0 +1,14 @@
+name: my-workflow
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Installing node_modules
+        run: npm install
+
+      - name: Lint project
+        run: make lint
