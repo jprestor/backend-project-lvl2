@@ -12,7 +12,7 @@ program
   .version('1.0.0')
   .arguments('<filepath1> <filepath2>')
   .option('-f, --format [type]')
-  .action((filepath1, filepath2, options, command) => {
+  .action((filepath1, filepath2, options) => {
     const file1 = JSON.parse(readFileSync(path.resolve(cwd(), filepath1), 'utf-8'));
     const file2 = JSON.parse(readFileSync(path.resolve(cwd(), filepath2), 'utf-8'));
 

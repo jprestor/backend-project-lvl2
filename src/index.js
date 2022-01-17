@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const genDiff = (file1, file2, format) => {
+const genDiff = (file1, file2) => {
   const keys1 = Object.keys(file1);
   const keys2 = Object.keys(file2);
   const keys = _.sortBy(_.union([...keys1, ...keys2]));
