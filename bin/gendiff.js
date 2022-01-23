@@ -16,7 +16,7 @@ program
     const file1 = JSON.parse(readFileSync(path.resolve(cwd(), filepath1), 'utf-8'));
     const file2 = JSON.parse(readFileSync(path.resolve(cwd(), filepath2), 'utf-8'));
 
-    getDiff(file1, file2, options.format);
+    console.log(getDiff(file1, file2, options.format));
   });
 
 program.parse();

@@ -33,7 +33,6 @@ const genDiff = (file1, file2) => {
   };
 
   const result = iter(keys, 1);
-  console.log(result);
   return result;
 };
 
