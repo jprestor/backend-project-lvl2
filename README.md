@@ -10,5 +10,5 @@
 Check diff between json files
 [![Brain Even Game](https://asciinema.org/a/JfaxUdJRtqZnhb2Tgv1v5TBgD.svg)](https://asciinema.org/a/umVDTWErphvYv0FmRwI7TC6PM)
 
-Check diff between json files
+Check diff between yaml files
 [![Brain Even Game](https://asciinema.org/a/JfaxUdJRtqZnhb2Tgv1v5TBgD.svg)](https://asciinema.org/a/feQrmi6l6DlhfFn7PUFmi2f8j)
