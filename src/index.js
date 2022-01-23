@@ -3,7 +3,7 @@ import _ from 'lodash';
 const genDiff = (file1, file2) => {
   const keys1 = Object.keys(file1);
   const keys2 = Object.keys(file2);
-  const keys = _.sortBy(_.union([...keys1, ...keys2]));
+  const keys = _.sortBy(_.union(keys1, keys2));
 
   const iter = (currentValue, depth) => {
     if (!_.isArray(currentValue)) {
@@ -32,8 +32,7 @@ const genDiff = (file1, file2) => {
     return ['{', ...lines, '}'].join('\n');
   };
 
-  const result = iter(keys, 1);
-  return result;
+  return iter(keys, 1);
 };
 
 export default genDiff;
