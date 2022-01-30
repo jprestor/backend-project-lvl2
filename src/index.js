@@ -45,7 +45,7 @@ const makeDiffTree = (data1, data2) => {
 
 const genDiff = (filepath1, filepath2, formatter = 'stylish') => {
   const obj1 = parse(readFile(filepath1), path.extname(filepath1));
-  const obj2 = parse(readFile(filepath2), path.extname(filepath1));
+  const obj2 = parse(readFile(filepath2), path.extname(filepath2));
   const diffTree = makeDiffTree(obj1, obj2);
 
   return format(diffTree, formatter);

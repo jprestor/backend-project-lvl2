@@ -15,3 +15,9 @@ Check diff between yaml files
 
 Check diff between nested objects
 [![asciicast](https://asciinema.org/a/cusbXENyAjolsn8bAyfRC2tiM.svg)](https://asciinema.org/a/cusbXENyAjolsn8bAyfRC2tiM)
+
+Check diff in plain text format
+[![asciicast](https://asciinema.org/a/wNSobVA3yMJbTcQ8pFqBacwRo.svg)](https://asciinema.org/a/wNSobVA3yMJbTcQ8pFqBacwRo)
+
+Check diff in json format
+[![asciicast](https://asciinema.org/a/G15WATt1fvG8WR61eaRSWW16v.svg)](https://asciinema.org/a/G15WATt1fvG8WR61eaRSWW16v)

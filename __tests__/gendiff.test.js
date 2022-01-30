@@ -9,34 +9,29 @@ const readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
 
 let resultStylish;
 let resultPlain;
+let resultJson;
 
 beforeAll(() => {
   resultStylish = readFile('result-stylish.txt');
   resultPlain = readFile('result-plain.txt');
+  resultJson = readFile('result-json.json');
 });
 
-test('gendiff stylish json', () => {
+test('gendiff stylish format', () => {
   const filepath1 = getFixturePath('file1.json');
-  const filepath2 = getFixturePath('file2.json');
-  expect(genDiff(filepath1, filepath2)).toEqual(resultStylish);
-  expect(genDiff(filepath1, filepath2, 'stylish')).toEqual(resultStylish);
-});
-
-test('gendiff stylish yml', () => {
-  const filepath1 = getFixturePath('file1.yml');
   const filepath2 = getFixturePath('file2.yml');
   expect(genDiff(filepath1, filepath2)).toEqual(resultStylish);
   expect(genDiff(filepath1, filepath2, 'stylish')).toEqual(resultStylish);
 });
 
-test('gendiff plain json', () => {
-  const filepath1 = getFixturePath('file1.json');
+test('gendiff plain format', () => {
+  const filepath1 = getFixturePath('file1.yml');
   const filepath2 = getFixturePath('file2.json');
   expect(genDiff(filepath1, filepath2, 'plain')).toEqual(resultPlain);
 });
 
-test('gendiff plain yml', () => {
-  const filepath1 = getFixturePath('file1.yml');
-  const filepath2 = getFixturePath('file2.yml');
-  expect(genDiff(filepath1, filepath2, 'plain')).toEqual(resultPlain);
+test('gendiff json format', () => {
+  const filepath1 = getFixturePath('file1.json');
+  const filepath2 = getFixturePath('file2.json');
+  expect(genDiff(filepath1, filepath2, 'json')).toEqual(resultJson);
 });
