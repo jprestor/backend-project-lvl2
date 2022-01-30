@@ -8,7 +8,10 @@
 ## Demo
 
 Check diff between json files
-[![Brain Even Game](https://asciinema.org/a/JfaxUdJRtqZnhb2Tgv1v5TBgD.svg)](https://asciinema.org/a/umVDTWErphvYv0FmRwI7TC6PM)
+[![asciicast](https://asciinema.org/a/JfaxUdJRtqZnhb2Tgv1v5TBgD.svg)](https://asciinema.org/a/umVDTWErphvYv0FmRwI7TC6PM)
 
 Check diff between yaml files
-[![Brain Even Game](https://asciinema.org/a/JfaxUdJRtqZnhb2Tgv1v5TBgD.svg)](https://asciinema.org/a/feQrmi6l6DlhfFn7PUFmi2f8j)
+[![asciicast](https://asciinema.org/a/JfaxUdJRtqZnhb2Tgv1v5TBgD.svg)](https://asciinema.org/a/feQrmi6l6DlhfFn7PUFmi2f8j)
+
+Check diff between nested objects
+[![asciicast](https://asciinema.org/a/cusbXENyAjolsn8bAyfRC2tiM.svg)](https://asciinema.org/a/cusbXENyAjolsn8bAyfRC2tiM)
