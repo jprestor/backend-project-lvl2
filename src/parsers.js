@@ -10,7 +10,7 @@ const parse = (data, fileExt) => {
       return yaml.load(data);
 
     default:
-      throw new Error('Unknown file extension');
+      throw new Error(`Unknown file extension: ${fileExt}`);
   }
 };
 

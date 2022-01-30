@@ -3,7 +3,7 @@ import { cwd } from 'process';
 import { readFileSync } from 'fs';
 import _ from 'lodash';
 import parse from './parsers.js';
-import stylish from './formatters/stylish.js';
+import format from './formatters/index.js';
 
 const readFile = (filepath) => readFileSync(path.resolve(cwd(), filepath), 'utf-8');
 
@@ -18,10 +18,10 @@ const calcStatus = (value1, value2, key) => {
     return 'added';
   }
   if (!_.has(value2, key)) {
-    return 'deleted';
+    return 'removed';
   }
   if (!_.isEqual(value1[key], value2[key])) {
-    return 'changed';
+    return 'updated';
   }
   return 'unchanged';
 };
@@ -48,10 +48,7 @@ const genDiff = (filepath1, filepath2, formatter = 'stylish') => {
   const obj2 = parse(readFile(filepath2), path.extname(filepath1));
   const diffTree = makeDiffTree(obj1, obj2);
 
-  if (formatter === 'stylish') {
-    return stylish(diffTree);
-  }
-  return diffTree;
+  return format(diffTree, formatter);
 };
 
 export default genDiff;

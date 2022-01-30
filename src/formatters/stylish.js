@@ -5,7 +5,7 @@ const markerOffset = 2;
 
 const renderValue = (value, depth) => {
   if (!_.isObject(value)) {
-    return String(value);
+    return value;
   }
 
   const indentSize = spacesCount * depth;
@@ -35,10 +35,10 @@ const stylish = (diffTree) => {
         case 'added':
           return `${diffIndent}+ ${key}: ${renderValue(values[1], newDepth)}`;
 
-        case 'deleted':
+        case 'removed':
           return `${diffIndent}- ${key}: ${renderValue(values[0], newDepth)}`;
 
-        case 'changed':
+        case 'updated':
           return `${diffIndent}- ${key}: ${renderValue(
             values[0],
             newDepth,
