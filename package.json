@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/jprestor/backend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/jprestor/backend-project-lvl2/actions)",
   "author": "Dmitriy Miroshnichenko",
-  "main": "./src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
   },

@@ -1,7 +1,7 @@
 import path, { dirname } from 'path';
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
-import genDiff from '../src';
+import genDiff from '../index';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
