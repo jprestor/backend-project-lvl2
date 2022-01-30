@@ -12,31 +12,32 @@ const renderValue = (value) => {
 };
 
 const plain = (diffTree) => {
-  const iter = (tree, parentKey) =>
-    tree
-      .filter(({ status }) => status !== 'unchanged')
-      .flatMap((node) => {
-        const { status, key, children, values } = node;
+  const iter = (tree, parentKey) => tree
+    .filter(({ status }) => status !== 'unchanged')
+    .flatMap((node) => {
+      const {
+        status, key, children, values,
+      } = node;
 
-        switch (status) {
-          case 'added':
-            return `${parentKey}${key}' was added with value: ${renderValue(values[1])}`;
+      switch (status) {
+        case 'added':
+          return `${parentKey}${key}' was added with value: ${renderValue(values[1])}`;
 
-          case 'removed':
-            return `${parentKey}${key}' was removed`;
+        case 'removed':
+          return `${parentKey}${key}' was removed`;
 
-          case 'updated':
-            return `${parentKey}${key}' was updated. From ${renderValue(
-              values[0],
-            )} to ${renderValue(values[1])}`;
+        case 'updated':
+          return `${parentKey}${key}' was updated. From ${renderValue(
+            values[0],
+          )} to ${renderValue(values[1])}`;
 
-          case 'nested':
-            return iter(children, `${parentKey}${key}.`);
+        case 'nested':
+          return iter(children, `${parentKey}${key}.`);
 
-          default:
-            throw new Error(`Unknown status: ${status}`);
-        }
-      });
+        default:
+          throw new Error(`Unknown status: ${status}`);
+      }
+    });
 
   return iter(diffTree, '')
     .map((line) => `Property '${line}`)

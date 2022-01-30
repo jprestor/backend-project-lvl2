@@ -29,7 +29,9 @@ const stylish = (diffTree) => {
     const newDepth = depth + 1;
 
     const lines = tree.map((node) => {
-      const { status, key, children, values } = node;
+      const {
+        status, key, children, values,
+      } = node;
 
       switch (status) {
         case 'added':
