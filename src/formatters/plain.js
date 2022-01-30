@@ -14,11 +14,9 @@ const renderValue = (value) => {
 const plain = (diffTree) => {
   const iter = (tree, parentKey) => tree
     .filter(({ status }) => status !== 'unchanged')
-    .flatMap((node) => {
-      const {
-        status, key, children, values,
-      } = node;
-
+    .flatMap(({
+      status, key, children, values,
+    }) => {
       switch (status) {
         case 'added':
           return `${parentKey}${key}' was added with value: ${renderValue(values[1])}`;

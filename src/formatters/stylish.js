@@ -28,11 +28,9 @@ const stylish = (diffTree) => {
     const diffIndent = ' '.repeat(indentSize - markerOffset);
     const newDepth = depth + 1;
 
-    const lines = tree.map((node) => {
-      const {
-        status, key, children, values,
-      } = node;
-
+    const lines = tree.map(({
+      status, key, children, values,
+    }) => {
       switch (status) {
         case 'added':
           return `${diffIndent}+ ${key}: ${renderValue(values[1], newDepth)}`;
