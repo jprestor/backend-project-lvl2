@@ -1,7 +1,7 @@
 import path from 'path';
 import { cwd } from 'process';
 import { readFileSync } from 'fs';
-import parse from './parsers.js';
+import parse from './parse.js';
 import makeDiffTree from './makeDiffTree.js';
 import format from './formatters/index.js';
 
