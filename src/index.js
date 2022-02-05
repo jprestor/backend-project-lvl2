@@ -2,8 +2,8 @@ import path from 'path';
 import { cwd } from 'process';
 import { readFileSync } from 'fs';
 import _ from 'lodash';
-import parse from './src/parsers.js';
-import format from './src/formatters/index.js';
+import parse from './parsers.js';
+import format from './formatters/index.js';
 
 const readFile = (filepath) => readFileSync(path.resolve(cwd(), filepath), 'utf-8');
 
